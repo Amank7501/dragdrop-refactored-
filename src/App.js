@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+// import ReactGrid from './components/ReactGrid';
+// import DragDrop from './components/DragDrop';
+// import EditableDivOne from './components/EditableDivOne';
+import { Route, Routes } from "react-router-dom";
+import DragDrop from './components/DragDrop';
+import Deploy from './components/Deploy';
+import Test2 from './components/Test2';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <DndProvider backend={HTML5Backend}>
+
+      {/* <div className='App'><ReactGrid /></div> */}
+      {/* <div className='App'><DragDrop /></div> */}
+      {/* <div className='App'><EditableDivOne /></div> */}
+      {/* <div className='App'><ParentComponent/></div> */}
+      <Routes>
+      <Route path="/" element={<DragDrop />} />
+      <Route path='/deploy' element={<Deploy/>}/>
+      {/* <Route path="/" element={<Test2 />} /> */}
+
+      </Routes>
+    
+    </DndProvider>
+  )
 }
 
-export default App;
+export default App

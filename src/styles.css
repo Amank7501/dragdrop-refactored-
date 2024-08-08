@@ -1,0 +1,20 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .griditemUI {
+    background-color: #949c9c;
+    border: 2px solid #fff;
+    line-height: 100px;
+  }
+
+  .editGrid{
+
+  }
+
+  #div1 {
+    margin-top: 10px;
+    background-color: beige;
+  }
+  
